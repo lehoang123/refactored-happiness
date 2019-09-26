@@ -1,0 +1,38 @@
+{
+  "name": "btc-ext",
+  "version": "0.2.2",
+  "description": "Chrome extension for convenient xpub access",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "package": "sh extpackage.sh",
+    "postinstall": "echo \"Y\" | elm-package install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Tormey <jrtormey@gmail.com>",
+  "license": "MIT",
+  "standard": {
+    "global": [
+      "chrome",
+      "localStorage"
+    ]
+  },
+  "devDependencies": {
+    "css-loader": "0.25.*",
+    "elm-webpack-loader": "^4.3.1",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "http-server": "0.9.*",
+    "json-loader": "^0.5.7",
+    "node-sass": "3.10.*",
+    "sass-loader": "4.0.*",
+    "standard": "^10.0.2",
+    "style-loader": "0.13.*",
+    "webpack": "2",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "bitcoinjs-lib": "^2.3.0"
+  }
+}
